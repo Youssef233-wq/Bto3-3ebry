@@ -4,7 +4,7 @@ const db = require('./db.json');
 const app = express();
 const PORT = 3000 | process.env.PORT;
 app.get('/',(req,res)=>{
-	res.sendFile(__dirpath,'/index.html');
+	res.sendFile(__dirname + '/index.html');
 })
 app.get('https://bto3-3ebry.vercel.app/test',(req,res)=>{
 res.end(db.json);
