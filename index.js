@@ -6,6 +6,6 @@ app.get('/',(req,res)=>{
 	res.sendFile(__dirname + '/index.html');
 })
 app.get('/sign-in,(req,res)=>{
-	res.sendFile(__dirname + '/sign-in.html');
+	res.sendFile(__dirname + '/signIn.html');
 })
 app.listen(PORT);
