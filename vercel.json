@@ -1,6 +1,5 @@
 {
   "build": {
-    "src": "index.js",
     "command": "node index.js"
   }
 }
