@@ -9,5 +9,6 @@ app.get('/',(req,res)=>{
 })
 app.get('/test',(req,res)=>{
 res.sendFile(__dirname + "/test.json");
+	res.end('test');
 })
 app.listen(PORT);
