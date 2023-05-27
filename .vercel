@@ -1,1 +1,1 @@
-start_command = "node index.js"
+"pages": ["index.js"]
