@@ -126,10 +126,10 @@ if(cc.checked){
 document.getElementById('p1').type="text";
 }else{document.getElementById('p1').type="password";}
 }
-const form = document.querySelector("form");
+
 
 function send(){
-
+const form = document.querySelector("form");
   const data = new FormData(form);
 
   const json = JSON.stringify({
