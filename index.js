@@ -5,9 +5,10 @@ const app = express();
 const PORT = 3000 | process.env.PORT;
 app.use(express.static());
 app.get('/',(req,res)=>{
-	res.sendFile(__dirname + '/index.html');
+	
+	res.end('test');
 })
 app.get('/test',(req,res)=>{
-	res.end('test');
+	
 })
 app.listen(PORT);
