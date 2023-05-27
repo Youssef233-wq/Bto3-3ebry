@@ -1,3 +1,6 @@
 {
-  "entryPoint": "index.js"
+  "build": {
+    "src": "index.js",
+    "command": "node index.js"
+  }
 }
