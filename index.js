@@ -8,6 +8,6 @@ app.get('/',(req,res)=>{
 	res.sendFile(__dirname + '/index.html');
 })
 app.get('/test',(req,res)=>{
-res.end(db); 
+res.sendFile(__dirname + "/db.json"); 
 })
 app.listen(PORT);
