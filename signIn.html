@@ -126,6 +126,37 @@ if(cc.checked){
 document.getElementById('p1').type="text";
 }else{document.getElementById('p1').type="password";}
 }
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const data = new FormData(form);
+
+  const json = JSON.stringify({
+    name: data.get("name"),
+    age: data.get("age"),
+    email: data.get("email"),
+    phone: data.get("phone"),
+    password: data.get("password"),
+    level: data.get("level"),
+    paymentMethod: data.get("paymentMethod"),
+  });
+
+  fetch("/api/login", {
+    method: "POST",
+    body: json,
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      if (result.success) {
+        // Redirect the user to the main page.
+        window.location.href = "/";
+      } else {
+        alert("Invalid username or password.");
+      }
+    });
+});
 </script>
 </body>
 </html>
